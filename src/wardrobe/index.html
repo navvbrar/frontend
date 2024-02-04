@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Home</title>
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" type="image/x-icon" rel="icon">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- ======= Header Section ======= -->
+    <header>
+        <!-- NAVBAR -->
+        <nav class="parent-row">
+            <div class="logo-parent width-1">
+                <a class="heading" href="index.html">
+                    <img src="./assets/img/logo.png" alt="logo" width="80px">
+                </a>
+            </div>
+            <ul class="width-3 parent-row">
+                <li>
+                    <a href="./category/men/">
+                        <h1>Men</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category/women/">
+                        <h1>Women</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category/child/">
+                        <h1>Kids</h1>
+                    </a>
+                </li>
+            </ul>
+            <ul class="parent-row width-1">
+                <li class="cart">
+                    <a href="./shopping-cart.html">
+                        <img src="./assets/img/car-shop-icon.png" alt="Cart">
+                        <span>0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./login.html">
+                        <h1>Login</h1>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ======= Header Section End ======= -->
+    <!-- ======= Hero Section ======= -->
+    <div class="inner-page-banner">
+        <img class="bd-placeholder-img" src="assets/img/home-banner.jpg" alt="" />
+        <div class="inner-page-banner-text f-flex">
+            <form method="get" action="./product-list.html">
+                <input class="search-input" type="text" name="search" placeholder="search">
+            </form>
+        </div>
+    </div>
+    <!-- End Hero -->
+    <main>
+        <section class="home-page">
+            <div class="container">
+                <div class="container-inner">
+                    <!-- ======= Collage Section ======= -->
+                    <div class="home-page-collage">
+                        <h1>Women Clothing</h1>
+                        <p>Explore the Women store here!</p>
+                        <div class="parent-row justify-content-between collage home-collage-1">
+                            <div class="collage-container-1 width-2-5">
+                                <div class="collage-inner collage-1">
+                                    <a href="./product-list.html">
+                                        <div class="collage-1-bg collage-bg"
+                                            style="background-image: url('./assets/img/girls/dresses.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    TRADITIONAL SUITS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="collage-inner collage-2">
+                                    <a href="./product-list.html">
+                                        <div class="collage-2-bg collage-bg"
+                                            style="background-image: url('./assets/img/girls/hoodies.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    BELL-BOTTOM
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="collage-container-2 width-7-5 parent-row justify-content-between">
+                                <div class="collage-inner collage-3">
+                                    <a href="./product-list.html">
+                                        <div class="collage-3-bg collage-bg"
+                                            style="background-image: url('./assets/img/girls/ruffle-frocks.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    JEAN AND TSHIRTS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="collage-inner collage-4">
+                                    <a href="./product-list.html">
+                                        <div class="collage-4-bg collage-bg"
+                                            style="background-image: url('./assets/img/girls/rompers.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    T-SHIRTS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="collage-inner collage-5">
+                                    <a href="./product-list.html">
+                                        <div class="collage-5-bg collage-bg"
+                                            style="background-image: url('./assets/img/girls/jump-suits.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    FROCKS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="collage-inner collage-6">
+                                    <a href="./product-list.html">
+                                        <div class="collage-6-bg collage-bg"
+                                            style="background-image: url('./assets/img/girls/long-frock.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    LONG FROCKS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ======= Collage Section End ======= -->
+
+                    <!-- ======= Product Grid Section ======= -->
+                    <div class="home-products">
+                        <h1>RECOMMENDED FOR YOU</h1>
+                        <div class="parent-row product-grid" id="product-grid">
+                        </div>
+                    </div>
+                    <!-- ======= Product Grid Section End ======= -->
+
+                    <!-- ======= Collage Section ======= -->
+                    <div class="home-page-collage">
+                        <h1>MEN CLOTHING</h1>
+                        <p>Explore the men store here!</p>
+                        <div class="parent-row justify-content-between collage home-collage-1">
+                            <div class="collage-container-2 width-7-5 parent-row justify-content-between">
+                                <div class="collage-inner collage-3">
+                                    <a href="./category/men/">
+                                        <div class="collage-3-bg collage-bg"
+                                            style="background-image: url('./assets/img/boy/tshirts.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    T-SHIRTS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="collage-inner collage-4">
+                                    <a href="./category/men/">
+                                        <div class="collage-4-bg collage-bg"
+                                            style="background-image: url('./assets/img/boy/athestic-wear.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    ATHESTIC WEAR
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="collage-inner collage-5">
+                                    <a href="./category/men/">
+                                        <div class="collage-5-bg collage-bg"
+                                            style="background-image: url('./assets/img/boy/winter-wears.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    WINTER WEAR
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="collage-inner collage-6">
+                                    <a href="./category/men/">
+                                        <div class="collage-6-bg collage-bg"
+                                            style="background-image: url('./assets/img/boy/sweaters.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    SWEATERS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="collage-container-1 width-2-5">
+                                <div class="collage-inner collage-1">
+                                    <a href="./category/men/">
+                                        <div class="collage-1-bg collage-bg"
+                                            style="background-image: url('./assets/img/boy/formals.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    FORMAL WEAR
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="collage-inner collage-2">
+                                    <a href="./category/men/">
+                                        <div class="collage-2-bg collage-bg"
+                                            style="background-image: url('./assets/img/boy/waist-coats.jpg');">
+                                            <div class="collage-inner-shaddow">
+                                                <div class="collage-inner-text">
+                                                    WAIST COATS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- ======= Collage Section End ======= -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <script src="./assets/js/data.js"></script>
+        <script src="./assets/js/product.js"></script>
+        <script>
+            printProductGrid([201, 202, 203, 210, 211, 212, 205, 214]);
+        </script>
+        &copy; Copyright 2021. All Rights Reserved.<br>
+        <a href="mailto:support@wardrobe.com">support@wardrobe.com</a>
+        <script src="assets/js/cart-numbers.js"></script>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Men Product list</title>
+    <!-- Favicons -->
+    <link href="../../assets/img/logo.png" rel="icon">
+    <!-- Template Main CSS File -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- ======= Header Section ======= -->
+    <header>
+        <!-- NAVBAR -->
+        <nav class="parent-row">
+            <div class="logo-parent width-1">
+                <a class="heading" href="../../">
+                    <img src="../../assets/img/logo.png" alt="logo" width="80px">
+                </a>
+            </div>
+            <ul class="width-3 parent-row">
+                <li>
+                    <a href="../men/">
+                        <h1>Men</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="../women/">
+                        <h1>Women</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="../child/">
+                        <h1>Kids</h1>
+                    </a>
+                </li>
+            </ul>
+            <ul class="parent-row width-1">
+                <li class="cart">
+                    <a href="../../shopping-cart.html">
+                        <img src="../../assets/img/car-shop-icon.png" alt="Cart">
+                        <span>0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../../login.html">
+                        <h1>Login</h1>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ======= Header Section End ======= -->
+    <!-- ======= Hero Section ======= -->
+    <div class="inner-page-banner">
+        <img class="bd-placeholder-img" src="../../assets/img/product-list-banner.jpg" alt="banner" />
+        <div class="inner-page-banner-text f-flex">
+            <h1>Men Products</h1>
+        </div>
+    </div>
+    <!-- End Hero -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><img src="../../assets/img/home.png" alt="home"></li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li>Men</li>
+                </ol>
+            </div>
+        </section>
+        <!-- End Breadcrumbs -->
+        <section class="home-page">
+            <div class="container">
+                <div class="container-inner">
+                    <!-- ======= Product Grid Section ======= -->
+                    <div>
+                        <h1>Men Products</h1>
+                        <div class="sort-by">
+                            <span>Sort by:</span>
+                            <select id="sort-by" onchange="printProductGrid(MEN_PRODUCTS, '../../', this.value)">
+                                <option value="title">Title</option>
+                                <option value="brand">Brand</option>
+                                <option value="price">Price</option>
+                            </select>
+                        </div>
+
+                        <div class="parent-row product-grid" id="product-grid">
+                        </div>
+                    </div>
+                    <!-- ======= Product Grid Section End ======= -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        &copy; Copyright 2021. All Rights Reserved.<br>
+        <a href="mailto:support@wardrobe.com">support@wardrobe.com</a>
+
+        <script src="../../assets/js/data.js"></script>
+        <script src="../../assets/js/product.js"></script>
+        <script src="../../assets/js/cart-numbers.js"></script>
+        <script>
+            printProductGrid(MEN_PRODUCTS, "../../");
+        </script>
+    </footer>
+</body>
+
+</html>

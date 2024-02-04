@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.76930333.css",
+    "main.js": "/static/js/main.3c2a5910.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/waist-coats.jpg": "/static/media/waist-coats.44d910c1be65848cae9c.jpg",
+    "static/media/tshirts.jpg": "/static/media/tshirts.2304c9cd6fc59188b167.jpg",
+    "static/media/formals.jpg": "/static/media/formals.8c641c2c6f39ab7e4388.jpg",
+    "static/media/long-frock.jpg": "/static/media/long-frock.801192f4ded6be2093a6.jpg",
+    "static/media/jump-suits.jpg": "/static/media/jump-suits.a3e208da0bc4f5b91671.jpg",
+    "static/media/home-banner.jpg": "/static/media/home-banner.1237f071774246b6793a.jpg",
+    "static/media/sweaters.jpg": "/static/media/sweaters.8030edb1d542339aca50.jpg",
+    "static/media/rompers.jpg": "/static/media/rompers.e3c97a00d1bc8fb56e41.jpg",
+    "static/media/cart-banner.jpg": "/static/media/cart-banner.eed0f9806ae4dba1d8d2.jpg",
+    "static/media/dresses.jpg": "/static/media/dresses.468c4277b514eb26cc00.jpg",
+    "static/media/hoodies.jpg": "/static/media/hoodies.45501da5d4dadaa16ff2.jpg",
+    "static/media/athestic-wear.jpg": "/static/media/athestic-wear.dee587b5c7621c87bfdc.jpg",
+    "static/media/login.jpg": "/static/media/login.10d23dd7ff032384bd49.jpg",
+    "static/media/ruffle-frocks.jpg": "/static/media/ruffle-frocks.34a00f6ff07824eafa9e.jpg",
+    "static/media/winter-wears.jpg": "/static/media/winter-wears.8cdf2316f0f90191076e.jpg",
+    "static/media/checkout-banner.png": "/static/media/checkout-banner.ada319757fc3e407015f.png",
+    "static/media/logo.png": "/static/media/logo.fb4264aeb2c4ce6f0f40.png",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.76930333.css.map": "/static/css/main.76930333.css.map",
+    "main.3c2a5910.js.map": "/static/js/main.3c2a5910.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76930333.css",
+    "static/js/main.3c2a5910.js"
+  ]
+}

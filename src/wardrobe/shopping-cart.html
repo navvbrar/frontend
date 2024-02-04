@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Shopping cart</title>
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- ======= Header Section ======= -->
+    <header>
+        <!-- NAVBAR -->
+        <nav class="parent-row">
+            <div class="logo-parent width-1">
+                <a class="heading" href="./">
+                    <img src="./assets/img/logo.png" alt="logo" width="80px">
+                </a>
+            </div>
+            <ul class="width-3 parent-row">
+                <li>
+                    <a href="./category/men/">
+                        <h1>Men</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category/women/">
+                        <h1>Women</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category/child/">
+                        <h1>Kids</h1>
+                    </a>
+                </li>
+            </ul>
+            <ul class="parent-row width-1">
+                <li class="cart">
+                    <a href="./shopping-cart.html">
+                        <img src="./assets/img/car-shop-icon.png" alt="Cart">
+                        <span>0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./login.html">
+                        <h1>Login</h1>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ======= Header Section End ======= -->
+    <!-- ======= Hero Section ======= -->
+    <div class="inner-page-banner">
+        <img class="bd-placeholder-img" src="assets/img/cart-banner.jpg" alt="banner" />
+        <div class="inner-page-banner-text f-flex">
+            <h1>Shopping Cart</h1>
+        </div>
+    </div>
+    <!-- End Hero -->
+    <!-- ======= Main Section ======= -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><img src="assets/img/home.png" alt="home"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Cart</li>
+                </ol>
+            </div>
+        </section>
+        <!-- End Breadcrumbs -->
+        <!-- ======= cart Section ======= -->
+        <section>
+            <div class="container">
+                <div class="parent-row" id="cart">
+                    <!-- left side div -->
+                    <div class="width-6-6 main_cart cart-left">
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="max-w100">Product</th>
+                                        <th scope="col"> </th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col"> </th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col"> </th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="product-container">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cupon">
+                            <div class="heading">Coupon</div>
+                            <p>Enter your coupon code here.</p>
+                            <div class="apply-coupan">
+                                <input type="text" class="input-form" placeholder="">
+                                <button>Apply Coupon</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- right side div -->
+                    <div class="width-3-3 cart-right">
+                        <div class="right_side p-3 shadow bg-white">
+                            <h2 class="product_name mb-5">Total in Cart</h2>
+                            <div class="price_indiv f-flex justify-content-between">
+                                <p>Product amount</p>
+                                <p class="product_total">$0.00</p>
+                            </div>
+                            <div class="price_indiv f-flex justify-content-between">
+                                <p>Tax</p>
+                                <p class="tax_total">$0.00</p>
+                            </div>
+                            <div class="total-amt f-flex justify-content-between font-weight-bold">
+                                <p>Total</p>
+                                <p class="total_amount">$0.00</p>
+                            </div>
+                            <div class="check-btn f-flex">
+                                <a class="btn-a" href="./checkout.html">PROCEED TO CHECKOUT</a>
+                            </div>
+                            <div class="f-flex justify-content-start shopping">
+                                <div class="width-10"><a href="./product-list.html" class="continue-shopping">Continue
+                                        shopping</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+    </main>
+    <!-- ======= Main Section ======= -->
+    <!-- FOOTER -->
+    <footer>
+        &copy; Copyright 2021. All Rights Reserved.<br>
+        <a href="mailto:support@wardrobe.com">support@wardrobe.com</a>
+        <script src="assets/js/cart-numbers.js"></script>
+        <script src="assets/js/data.js"></script>
+        <script src="assets/js/cart.js"></script>
+    </footer>
+</body>
+
+</html>

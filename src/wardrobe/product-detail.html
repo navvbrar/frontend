@@ -1,0 +1,211 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>product details</title>
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon" />
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- ======= Header Section ======= -->
+    <header>
+        <!-- NAVBAR -->
+        <nav class="parent-row">
+            <div class="logo-parent width-1">
+                <a class="heading" href="./">
+                    <img src="./assets/img/logo.png" alt="logo" width="80px">
+                </a>
+            </div>
+            <ul class="width-3 parent-row">
+                <li>
+                    <a href="./category/men/">
+                        <h1>Men</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category/women/">
+                        <h1>Women</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category/child/">
+                        <h1>Kids</h1>
+                    </a>
+                </li>
+            </ul>
+            <ul class="parent-row width-1">
+                <li class="cart">
+                    <a href="./shopping-cart.html">
+                        <img src="./assets/img/car-shop-icon.png" alt="Cart">
+                        <span>0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./login.html">
+                        <h1>Login</h1>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ======= Header Section End ======= -->
+    <!-- ======= Main Section ======= -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><img src="assets/img/home.png" alt="home"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Product</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="product-detail">
+            <div class="container">
+                <div class="parent-row main-description justify-content-between">
+                    <div class="width-5 parent-row product-images">
+                        <div class="parent-row">
+                            <div class="image-container">
+                                <img id="main-1" src="" alt="product" width="100%">
+                            </div>
+                            <div class="image-container">
+                                <img id="main-2" src="" alt="product" width="100%">
+                            </div>
+                        </div>
+                        <div class="parent-row">
+                            <div class="image-container">
+                                <img id="main-3" src="" alt="product" width="100%">
+                            </div>
+                            <div class="image-container">
+                                <img id="main-4" src="" alt="product" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-container width-4-5">
+                        <h1 id="product-title"></h1>
+                        <h2 id="product-brand" class="seller"></h2>
+                        <div class="rating-container">
+                            <div class="rating">
+                                <div class="rating-inner">4.1
+                                    <span class="star"><img src="assets/img/star.jpg" alt="star" height="17px"
+                                            width="18px"></span>
+                                    <span class="index-separator">|</span>
+                                    <span>210 ratings</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-section">
+                            <p class="pice-inner">
+                                <span class="price">
+                                    <strong id="after-discount-price"></strong>
+                                </span>
+                                <span id="discount-section">
+                                    <span class="mrp">
+                                        <del id="mrp"></del>
+                                    </span>
+                                    <span class="discount">
+                                        (<span id="discount"></span>% off)
+                                    </span>
+                                </span>
+                            </p>
+                            <p class="tax">Inclusive of all taxes</p>
+                        </div>
+                        <div class="parent-row quantity-section">
+                            <div class="quantity_changer backward"><a href="javascript:void(0)" style="width:20px"><img
+                                src="assets/img/backward-svgrepo-com.svg" alt="sub" /></a></div>
+                            <div class="qty">1</div>
+                            <div class="quantity_changer forward"><a href="javascript:void(0)" style="width:20px"><img
+                                src="assets/img/forward-svgrepo-com.svg" alt="sub" /></a></div>
+                        </div>
+                        
+                        <div class="add-to-cart-section parent-row">
+                            <a class="add-to-cart-btn btn" id="add-to-cart">
+                                Add to cart
+                            </a>
+                        </div>
+
+                        <div class="delivery-options-parent">
+                            <h2 class="delivery-options">Delivery options</h2>
+                            <div class="check-pincode-parent">
+                                <input type="text" class="input-form check-pin" name="pincode"
+                                    placeholder="Enter pin code">
+                                <div class="check-pincode-text">Check</div>
+                            </div>
+                            <ul>
+                                <li>Pay on delivery available</li>
+                                <li>Credit and debit cards also acceptable</li>
+                                <li>Easy 30 days return and exchange policy</li>
+
+                            </ul>
+                        </div>
+                        <div class="parent-row justify-content-space-evenly">
+                            <div class="width-4 product-detail-row f-flex justify-content-between">
+                                <p class="product-detail-key">Fabric</p>
+                                <p class="product-detail-value">Cotton</p>
+                            </div>
+                            <div class="width-4 product-detail-row f-flex justify-content-between">
+                                <p class="product-detail-key">Fit</p>
+                                <p class="product-detail-value">Slim Fit</p>
+                            </div>
+                            <div class="width-4 product-detail-row f-flex justify-content-between">
+                                <p class="product-detail-key">Length</p>
+                                <p class="product-detail-value">Regular</p>
+                            </div>
+                            <div class="width-4 product-detail-row f-flex justify-content-between">
+                                <p class="product-detail-key">Main Trend</p>
+                                <p class="product-detail-value">Colourblocked</p>
+                            </div>
+                            <div class="width-4 product-detail-row f-flex justify-content-between">
+                                <p class="product-detail-key">Multipack Set</p>
+                                <p class="product-detail-value">Single</p>
+                            </div>
+                            <div class="width-4 product-detail-row f-flex justify-content-between">
+                                <p class="product-detail-key">Neck</p>
+                                <p class="product-detail-value">Round Neck</p>
+                            </div>
+                            <div class="width-4 product-detail-row f-flex justify-content-between">
+                                <p class="product-detail-key">Pattern</p>
+                                <p class="product-detail-value">Colourblocked</p>
+                            </div>
+                            <div class="width-4 product-detail-row f-flex justify-content-between">
+                                <p class="product-detail-key">Pattern Coverage</p>
+                                <p class="product-detail-value">Chest</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-products">
+                    <h1>SIMILAR PRODUCTS</h1>
+                    <div class="parent-row product-grid" id="product-grid">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        &copy; Copyright 2021. All Rights Reserved.<br>
+        <a href="mailto:support@wardrobe.com">support@wardrobe.com</a>
+
+        <script src="./assets/js/data.js"></script>
+        <script src="./assets/js/product.js"></script>
+        <script src="./assets/js/product-detail.js"></script>
+        <script src="./assets/js/Add-to-cart.js"></script>
+        <script src="assets/js/cart-numbers.js"></script>
+        <script>
+            setProductData();
+        </script>
+    </footer>
+
+</body>
+
+</html>

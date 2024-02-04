@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Checkout</title>
+
+        <!-- Favicons -->
+        <link href="assets/img/logo.png" rel="icon">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+
+        <!-- Jquery -->
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <!-- ======= Header Section ======= -->
+        <header>
+            <!-- NAVBAR -->
+            <nav class="parent-row">
+                <div class="logo-parent width-1">
+                    <a class="heading" href="./">
+                        <img src="./assets/img/logo.png" alt="logo" width="80px">
+                    </a>
+                </div>
+                <ul class="width-3 parent-row">
+                    <li>
+                        <a href="../weensy/category/men/">
+                            <h1>Men</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../weensy/category/women/">
+                            <h1>Women</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../weensy/category/child/">
+                            <h1>Kids</h1>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="parent-row width-1">
+                    <li class="cart">
+                        <a href="./shopping-cart.html">
+                            <img src="./assets/img/car-shop-icon.png" alt="Cart">
+                            <span>0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="./assets/img/user-icon.svg" alt="user" width="30px">
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ======= Header Section End ======= -->
+        <!-- ======= Hero Section ======= -->
+        <div class="inner-page-banner">
+            <img class="bd-placeholder-img" src="assets/img/checkout-banner.png" alt="banner" />
+            <div class="inner-page-banner-text f-flex">
+                <h1>Checkout</h1>
+            </div>
+        </div>
+        <!-- End Hero -->
+        <!-- ======= Main Section ======= -->
+        <main id="main">
+            <!-- ======= Breadcrumbs ======= -->
+            <section class="breadcrumbs">
+                <div class="container">
+                    <ol>
+                        <li><img src="assets/img/home.png" alt="home"></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="./shopping-cart.html">Cart</a></li>
+                        <li>Checkout</li>
+                    </ol>
+                </div>
+            </section>
+            <!-- ======= End Breadcrumbs ======= -->
+            <!-- ======= Checkout Form ======= -->
+            <section class="checkout-form" id="checkout-form">
+                <div class="container inner">
+                    <div class="checkout-inner">
+                        <div class="parent-row">
+                            <div class="checkout-left-section width-6">
+                                <form method="post" class="checkout-detail-form">
+                                    <h6>Checkout details</h6>
+                                    <div class="parent-row justify-content-between form-div">
+                                        <div class="width-4-9">
+                                            <label>First Name</label>
+                                            <span class="astrik">&#42;</span>
+                                            <input type="text" class="input-form" name="first_name" placeholder="First name" required>
+                                        </div>
+                                        <div class="width-4-9">
+                                            <label>Last Name</label>
+                                            <span class="astrik">&#42;</span>
+                                            <input type="text" class="input-form" name="last_name" placeholder="Last name" required>
+                                        </div>
+                                        <div class="width-4-9">
+                                            <label>E-mail</label>
+                                            <span class="astrik">&#42;</span>
+                                            <input type="text" class="input-form" name="email" placeholder="email@gmail.com" required>
+                                        </div>
+                                        <div class="width-4-9">
+                                            <label>Phone Number</label>
+                                            <span class="astrik">&#42;</span>
+                                            <input type="text" class="input-form" name="phone_number" placeholder="0351" required>
+                                        </div>
+                                        <div class="width-10">
+                                            <label>Address</label>
+                                            <input type="text" class="input-form" name="address_line_2"
+                                                placeholder="Address line 1">
+                                            <input type="text" class="input-form" name="address_line_1"
+                                                placeholder="Address line 2">
+                                        </div>
+                                        <div class="width-10">
+                                            <label>City</label>
+                                            <input type="text" class="input-form" placeholder="City">
+                                        </div>
+                                        <div class="width-4-9">
+                                            <label>District</label>
+                                            <input type="text" class="input-form" name="district" placeholder="District">
+                                        </div>
+                                        <div class="width-4-9">
+                                            <label>Postal Code</label>
+                                            <input type="text" class="input-form" name="zip_code" placeholder="0000-000">
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="checkout-right-section width-4">
+                                <div class="card">
+                                    <!-- Apply Promo -->
+                                    <div class="apply-promo">
+                                        <label>Coupon code</label>
+                                        <div class="promo-inner">
+                                            <input type="text" class="input-form">
+                                            <button class="btn">Apply</button>
+                                        </div>
+                                    </div>
+                                    <!-- End Apply Promo -->
+                                  
+                                    <!-- Radio buttons area -->
+                                    <div class="radio-section">
+                                        <h5>Payment method</h5>
+                                        <div class="inner-content">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="payment_method"
+                                                    value="card" id="card_payment" checked>
+                                                <label class="form-check-label" for="card_payment">
+                                                    Credit card
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="payment_method"
+                                                    value="net_banking" id="net_banking_payment">
+                                                <label class="form-check-label" for="net_banking_payment">
+                                                    Net banking
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="payment_method"
+                                                    value="paypal" id="paypal_payment">
+                                                <label class="form-check-label" for="paypal_payment">
+                                                    Paypal
+                                                </label>
+                                            </div>
+                                            <div class="width-10 form-check tick-box">
+                                                <input class="form-check-input" type="checkbox" name="terms" value=""
+                                                    id="terms" checked="">
+                                                <label class="form-check-label" for="terms">I have read and agree to the
+                                                    Ativo Kids Terms and Conditions.</label>
+                                            </div>
+                                            <div class="full-btn">
+                                                <a href="./success.html" class="btn">Proceed to payment</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Radio buttons area -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ======= End Checkout Form ======= -->
+
+        </main>
+        <!-- ======= Main Section ======= -->
+        <!-- FOOTER -->
+        <footer>
+            &copy; Copyright 2021. All Rights Reserved.<br>
+            <a href="mailto:support@wardrobe.com">support@wardrobe.com</a>
+            <script src="./assets/js/jquery.validate.js"></script>
+            <script src="./assets/js/checkout.js"></script>
+            <script src="assets/js/cart-numbers.js"></script>
+        </footer>
+    </body>
+</html>
