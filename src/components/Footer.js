@@ -13,10 +13,10 @@ export default function Footer() {
         <div className="col-12 col-lg-3 col-sm-12 mb-2">
       
           <a href="https://mdbootstrap.com/" target="_blank" className="text-white h2">
-            MDB
+           wardrobe
           </a>
           <p className="mt-1 text-white">
-            © 2023 Copyright: MDBootstrap.com
+           from heart to your home
           </p>
         </div>
         

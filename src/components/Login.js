@@ -22,7 +22,7 @@ export default function Login() {
     e.preventDefault();
     const { email, password } = input;
 
-    const loginuser = await fetch("http://localhost:5000/api/auth", {
+    const loginuser = await fetch("https://ecommerce-backend3-i4yr.onrender.com/api/auth", {
       headers: { "content-type": "application/json" },
       method: "POST",
       body: JSON.stringify({

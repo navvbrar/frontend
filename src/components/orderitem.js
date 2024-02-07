@@ -55,7 +55,7 @@ export default function Orderitem(props) {
               <li className="step0 text-muted text-end" id="step4"></li>
              
             </ul> */}
-            <div className='mb-0' style={{width:"400px" , margin:"0px"}}  > <Progressbar/></div>
+            <div className='mb-0' style={{width:"400px" , margin:"0px"}}  > <Progressbar order={order} /></div>
 
             <div className="d-flex justify-content-start">
               <div className="d-lg-flex align-items-center">
