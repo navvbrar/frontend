@@ -24,7 +24,7 @@ export default function Signup() {
     e.preventDefault();
     const {fname,mname,lname,uname,email,phone,password}=forminput;
     
-   const signupuser = await fetch("http://localhost:5000/api/account",{
+   const signupuser = await fetch("https://ecommerce-backend3-i4yr.onrender.com/api/auth/api/account",{
 
   headers:{"content-type":"application/json"},
   method:"POST",
