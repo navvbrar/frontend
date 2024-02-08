@@ -3,7 +3,7 @@ import productcontext from './Productcontext';
 
 
 const Productstate=(props)=> {
-  
+  let API_URL = `https://ecommerce-backend3-i4yr.onrender.com`
       let [allproducts,setallproducts]=useState([]);
     const [singleproduct,setsingleproduct]=useState([]);
     const [average_rating,setaverage_rating] = useState(null)
@@ -32,7 +32,7 @@ const Productstate=(props)=> {
     const getproducts= async()=>{
       setspinner(true)
       // setloading(20)
-   let product = await fetch("http://localhost:5000/api/product",{
+   let product = await fetch(`${API_URL}/api/product`,{
 
    method:"GET",
    headers:{
@@ -61,7 +61,7 @@ const Productstate=(props)=> {
    const productdetails = async (id)=>{
     setloading(30)
     setspinner(true)
-    const details = await fetch(`http://localhost:5000/api/product/${id}`,{
+    const details = await fetch(`${API_URL}/api/product/${id}`,{
 
     method:"GET",
     headers:{
@@ -88,7 +88,7 @@ const Productstate=(props)=> {
 
    const getuser=async()=>{
     setloading(30)
-    const userdetails = await fetch(`http://localhost:5000/api/account`,{
+    const userdetails = await fetch(`${API_URL}/api/account`,{
 
     method:"GET",
     headers:{
@@ -115,7 +115,7 @@ const Productstate=(props)=> {
    const getcart=async()=>{
      
     // setloading(30)
-    const getitems = await fetch(`http://localhost:5000/api/cart`,{
+    const getitems = await fetch(`${API_URL}/api/cart`,{
 
     method:"GET",
     headers:{
@@ -144,7 +144,7 @@ const Productstate=(props)=> {
    const addtocart=async(product_id,quantity,size)=>{
      
 
-    const addtocart = await fetch(`http://localhost:5000/api/cart`,{
+    const addtocart = await fetch(`${API_URL}/api/cart`,{
 
     method:"POST",
     headers:{
@@ -167,7 +167,7 @@ const Productstate=(props)=> {
    }
    const deletecartitem=async(id)=>{
   
-    const details = await fetch(`http://localhost:5000/api/cart/${id}`,{
+    const details = await fetch(`${API_URL}/api/cart/${id}`,{
 
     method:"DELETE",
     headers:{
@@ -189,7 +189,7 @@ const Productstate=(props)=> {
    }
    const updatecart=async(id,quantity)=>{
   
-    const details = await fetch(`http://localhost:5000/api/cart/${id}`,{
+    const details = await fetch(`${API_URL}/api/cart/${id}`,{
 
     method:"PUT",
     headers:{
@@ -213,7 +213,7 @@ const Productstate=(props)=> {
    const searchitem =async(endpoint,value)=>{
       setloading(30)
     
-    const details = await fetch(`http://localhost:5000/api/search${endpoint}${value}`,{
+    const details = await fetch(`${API_URL}/api/search${endpoint}${value}`,{
 
     method:"GET",
     headers:{
@@ -234,7 +234,7 @@ const Productstate=(props)=> {
    }
   const neworder =async(details)=>{
     setloading(30)
-    const addorder = await fetch(`http://localhost:5000/api/order`,{
+    const addorder = await fetch(`${API_URL}/api/order`,{
 
     method:"POST",
     headers:{
@@ -257,7 +257,7 @@ const Productstate=(props)=> {
   }
 
 const getorder=async()=>{
-  const orders = await fetch(`http://localhost:5000/api/order`,{
+  const orders = await fetch(`${API_URL}/api/order`,{
 
     method:"GET",
     headers:{
@@ -276,7 +276,7 @@ const getorder=async()=>{
 }
 
 const addproduct =async(info)=>{
-  const addfetch= await fetch(`http://localhost:5000/api/product`,{
+  const addfetch= await fetch(`${API_URL}/api/product`,{
  method:"POST",
  headers:{
   "content-type":"application/json",
@@ -288,7 +288,7 @@ const addproduct =async(info)=>{
   })
 }
 const otp_req = async(email)=>{
-  const password_reset= await fetch(`http://localhost:5000/api/account`,{
+  const password_reset= await fetch(`${API_URL}/api/account`,{
     method:"PUT",
     headers:{
      "content-type":"application/json",
@@ -309,7 +309,7 @@ const otp_req = async(email)=>{
      }
 }
 const otp_match = async(data)=>{
-  const password_reset= await fetch(`http://localhost:5000/api/auth`,{
+  const password_reset= await fetch(`${API_URL}/api/auth`,{
     method:"PUT",
     headers:{
      "content-type":"application/json",
@@ -328,7 +328,7 @@ const otp_match = async(data)=>{
     }
     const add_review= async(data)=>{
       
-      const adding_review = await fetch(`http://localhost:5000/api/review`,{
+      const adding_review = await fetch(`${API_URL}/api/review`,{
         method:"POST",
         headers:{
          "content-type":"application/json",
@@ -346,7 +346,7 @@ const otp_match = async(data)=>{
 
     }
   const getreviews=async(product_id)=>{
-    const fetching_review = await fetch(`http://localhost:5000/api/review/${product_id}`,{
+    const fetching_review = await fetch(`${API_URL}/api/review/${product_id}`,{
       method:"GET",
       headers:{
        "content-type":"application/json",
@@ -368,7 +368,7 @@ const otp_match = async(data)=>{
   }
 
   const addpromo = async(data)=>{
- const fetch_promo = await fetch("http://localhost:5000/api/promotion",{
+ const fetch_promo = await fetch("${API_URL}/api/promotion",{
  method:"POST",
  headers:{
   "content-type":"application/json"
