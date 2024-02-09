@@ -5,6 +5,7 @@ import img from "../wardrobe/assets/img/cart-banner.jpg"
 
 export default function Signup() {
   const[forminput,setforminput]= useState({fname:"",mname:"",lname:"",uname:"",email:"",phone:"",password:""})
+  const [validation,setvalidation]=useState({message:"",color:""})
   const navigation= useNavigate();
  const onchange =(e)=>{
   e.preventDefault();
@@ -23,7 +24,28 @@ export default function Signup() {
    const signup = async(e)=>{
     e.preventDefault();
     const {fname,mname,lname,uname,email,phone,password}=forminput;
-    
+
+    if(fname.length<5){
+        setvalidation({
+            message:"name should be atleast 5 characters",
+            color:"red"
+        })
+        return 0
+    }
+   else if(uname.length<5){
+        setvalidation({
+            message:"user name should be atleast 5 characters",
+            color:"red"
+        })
+        return 0
+    }
+   else if(lname.length<3){
+        setvalidation({
+            message:"last name should be atleast 2 characters",
+            color:"red"
+        })
+        return 0
+    }
    const signupuser = await fetch("https://ecommerce-backend3-i4yr.onrender.com/api/account",{
 
   headers:{"content-type":"application/json"},
@@ -44,8 +66,14 @@ export default function Signup() {
    console.log(response)
    if(response.success===true){
    localStorage.setItem("token",response.token)
-   console.log(response.token)
-   navigation("/")
+    setvalidation({
+        message:"account created successfully",
+        color:"green"
+    })
+    setTimeout(()=>{
+        navigation("/")
+    },2000)
+  
    
 
 
@@ -70,7 +98,9 @@ export default function Signup() {
             </nav>
         </header>
         
-
+  <div className='text-center' style={{color:validation.color}}>
+      { validation.message }
+  </div>
       
         <main id="main" >
             <section className="login-page" >
