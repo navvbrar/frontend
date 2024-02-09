@@ -46,7 +46,32 @@ export default function Signup() {
         })
         return 0
     }
-   const signupuser = await fetch("https://ecommerce-backend3-i4yr.onrender.com/api/account",{
+   const email_regex =  new RegExp("[a-z0-9]+@[a-z]+\.[a-z]{2,3}")
+   if (!email_regex.test(email)){
+    setvalidation({
+        message:"email should be a valid email",
+        color:"red"
+    })
+    return 0
+   }
+   const password_regex =  new RegExp("^(?=.*[0-9])"
+                       + "(?=.*[a-z])(?=.*[A-Z])"
+                       + "(?=.*[@#$%^&+=])"
+                       + "(?=\\S+$).{8,20}$")
+     if (!password_regex.test(password)){
+        setvalidation({
+            message:"password  should contain" 
+            +  " Atleast One upper case letter"    
+            +  " Atleast One Lower case letter"    
+            +  " Atleast One Special Character"    
+            +  " Atleast One Number "    ,
+            color:"red"
+        })
+        return 0
+     }    
+
+
+      const signupuser = await fetch("https://ecommerce-backend3-i4yr.onrender.com/api/account",{
 
   headers:{"content-type":"application/json"},
   method:"POST",
@@ -98,7 +123,7 @@ export default function Signup() {
             </nav>
         </header>
         
-  <div className='text-center' style={{color:validation.color}}>
+  <div className='text-center ' style={{color:validation.color,marginTop:"150px"}}>
       { validation.message }
   </div>
       
