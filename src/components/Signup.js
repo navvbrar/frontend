@@ -30,7 +30,7 @@ export default function Signup() {
             message:"name should be atleast 5 characters",
             color:"red"
         })
-        return 0
+        // return 0
     }
    else if(uname.length<5){
         setvalidation({
@@ -98,11 +98,12 @@ export default function Signup() {
     setTimeout(()=>{
         navigation("/")
     },2000)
-  
+
    
-
-
-   }
+}
+else if (response.success=== false){
+   
+}
 
 
    } 
