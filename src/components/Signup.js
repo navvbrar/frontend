@@ -123,7 +123,7 @@ export default function Signup() {
             </nav>
         </header>
         
-  <div className='text-center ' style={{color:validation.color,marginTop:"150px"}}>
+  <div className='text-center ' style={{color:validation.color}}>
       { validation.message }
   </div>
       
