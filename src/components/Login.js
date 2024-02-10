@@ -23,13 +23,11 @@ export default function Login() {
     const { email, password } = input;
     const email_regex =  new RegExp("[a-z0-9]+@[a-z]+\.[a-z]{2,3}")
     if (!email_regex.test(email)){
-    //  setvalid({
-    //      message:"email should be a valid email",
-    //      color:"red"
-    //  })
-    //  setTimeout(() => {
-    //   setvalid(null);
-    // }, 3000);
+     setvalid({
+         message:"email should be a valid email",
+         color:"red"
+     })
+  
      return 0
     }
 
