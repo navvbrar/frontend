@@ -27,7 +27,12 @@ export default function Login() {
          message:"email should be a valid email",
          color:"red"
      })
-  
+     setTimeout(() => {
+      setvalid({
+        message:"",
+        color:""
+      });
+    }, 3000);
      return 0
     }
 
