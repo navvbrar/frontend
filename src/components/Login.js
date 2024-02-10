@@ -21,6 +21,17 @@ export default function Login() {
   const Login = async (e) => {
     e.preventDefault();
     const { email, password } = input;
+    const email_regex =  new RegExp("[a-z0-9]+@[a-z]+\.[a-z]{2,3}")
+    if (!email_regex.test(email)){
+     setvalid({
+         message:"email should be a valid email",
+         color:"red"
+     })
+     setTimeout(() => {
+      setvalid(null);
+    }, 3000);
+     return 0
+    }
 
     const loginuser = await fetch("https://ecommerce-backend3-i4yr.onrender.com/api/auth", {
       headers: { "content-type": "application/json" },

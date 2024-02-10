@@ -55,9 +55,19 @@ export default function Recoverpassword() {
   const onmatching_otp = async (e) => {
     
      e.preventDefault()
-   
-     if(credentials.password.length<5){
- setvalidation("password should not be less then 5 characters")
+     const password_regex =  new RegExp("^(?=.*[0-9])"
+     + "(?=.*[a-z])(?=.*[A-Z])"
+     + "(?=.*[@#$%^&+=])"
+     + "(?=\\S+$).{8,20}$")
+
+
+
+     if(!password_regex.test(credentials.password)){
+ setvalidation("password  should contain" 
+ +  " Atleast One upper case letter"    
+ +  " Atleast One Lower case letter"    
+ +  " Atleast One Special Character"    
+ +  " Atleast One Number "  )
  return 0
      }
      if(document.getElementById("password").value !== document.getElementById("pass2").value){
