@@ -24,7 +24,7 @@ export default function Home2() {
           getproducts();
           }
         else{
-  navigation("/login")
+  navigation("/loginsignup")
         }
      },[])
 

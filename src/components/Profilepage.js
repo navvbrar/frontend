@@ -7,7 +7,7 @@ export default function Profilepage() {
     const navigation= useNavigate();
     const onclick=()=>{
     localStorage.removeItem("token");
-    navigation("/login")
+    navigation("/loginsignup")
 
     }
     const Onadminwindow = ()=>{
