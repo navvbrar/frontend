@@ -1,14 +1,17 @@
 import React from 'react'
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
-import productcontext from "../context/Productcontext";
 import "../login_signup.css"
 export default function Login_signup() {
-    const { valid, setvalid } = useContext(productcontext);
+    
     const[forminput,setforminput]= useState({fname:"",mname:"",lname:"",uname:"",email:"",phone:"",password:""})
     const [validation,setvalidation]=useState({message:"",fname_color:"",lname_color:"",uname_color:"",email_color:"",password_color:"",phone_color:""})
   const [input, setinput] = useState({ email: "", password: "" });
+  const [valid,setvalid] = useState({
+    message:"",
+    color:""
+  })
 
   let navi = useNavigate();
 
@@ -219,9 +222,9 @@ else if (response.success=== false){
   
   return (
     <>
-      <div class ="row">  
+      <div class ="row" style={{background:"#c8c8c8",font:`600 16px/18px 'Open Sans',sans-serif`,color:"#6a6f8c"}}>  
 	<div class="col-md-6 mx-auto p-0">
-		<div class="card">
+		<div class="card" style={{width:"500px",left:"100px"}}>
 <div class="login-box">
 	<div class="login-snip">
 		<input id="tab-1" type="radio" name="tab"  class="sign-in"  defaultChecked/><label for="tab-1" class="tab"   >Login</label>

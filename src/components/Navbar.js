@@ -45,12 +45,12 @@ import {Link} from "react-router-dom"
    
   return (
     <>
-       <nav className={`navbar sticky-top navbar-expand-lg   ${theme.backcolor==="black"?"bg-dark":"bg-body-tertiary"} `}>
+       <nav className={`navbar sticky-top navbar-expand-lg ${theme.backcolor==="black"?"bg-dark":"bg-body-tertiary"} `}>
   <div className="container-fluid">
     <img src={img} style={{height:"50px",width:"80px"}} ></img>
-    {/* <a className="navbar-brand" href="#">Shop</a> */}
-    <button className="navbar-toggler" type="button" style={{color:theme.textcolor}} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon" style={{backgroundColor:theme.textcolor}}></span>
+   
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon " style={{color:theme.backcolor==="black"?"white":"black"}}><i class="fa-solid fa-bars fa-xl"></i></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">

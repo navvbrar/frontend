@@ -24,7 +24,7 @@ export default function Search() {
         searchitem(endpoint, a);
       }
     } else {
-      navigation("/signup");
+      navigation("/loginsignup");
     }
   }, [parameter]);
 

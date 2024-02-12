@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import productcontext from '../context/Productcontext'
 import { useNavigate } from 'react-router-dom'
-
+import "../login_signup.css"
 export default function Recoverpassword() {
   const navigation = useNavigate()
   const { otp_req, otp_match } = useContext(productcontext)
@@ -104,7 +104,7 @@ export default function Recoverpassword() {
   return (
     <>
     
-      <div className="card text-center" style={{ width:"400px", margin: "150px 600px" , }}>
+      <div className="card text-center" style={{ width:"400px", margin: "150px 600px" , background:"#c8c8c8"}}>
         <div className="card-header h5 text-white bg-primary">Password Reset</div>
         <div className="card-body px-5">
           <p className="card-text py-2" >
