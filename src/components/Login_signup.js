@@ -222,9 +222,10 @@ else if (response.success=== false){
   
   return (
     <>
-      <div class ="row" style={{background:"#c8c8c8",font:`600 16px/18px 'Open Sans',sans-serif`,color:"#6a6f8c"}}>  
+    <body style={{background:"#c8c8c8",font:`600 16px/18px 'Open Sans',sans-serif`,color:"#6a6f8c",margin:"0px"}}>
+      <div class ="row" >  
 	<div class="col-md-6 mx-auto p-0">
-		<div class="card" style={{width:"500px",left:"100px"}}>
+		<div class="card" style={{width:"500px",left:"100px",height:"700px"}}>
 <div class="login-box">
 	<div class="login-snip">
 		<input id="tab-1" type="radio" name="tab"  class="sign-in"  defaultChecked/><label for="tab-1" class="tab"   >Login</label>
@@ -278,14 +279,14 @@ else if (response.success=== false){
 					<input id="pass" name='password' type="password" onChange={on_signup_change} class="input" data-type="password" placeholder="Create your password" style={{color:validation.password_color}}/>
 				</div>
 				
-				<div class="group">
+				<div class="group" >
 					<button  class="button"  onClick={signup}> Sign up</button>
 				</div>
         <p >{validation.message}</p>  
 				<div class="hr"></div>
 				<div class="foot">
         
-					<label for="tab-1">Already Member?</label>
+					{/* <label for="tab-1">Already Member?</label> */}
 				</div>
 			</div>
 		</div>
@@ -294,7 +295,7 @@ else if (response.success=== false){
 </div>
 </div>
 </div>
-
+</body>
     </>
   )
 }

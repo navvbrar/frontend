@@ -22,7 +22,7 @@ export default function Products() {
 
   return (
     <> 
-       <div className=' container row my-3 mx-4'>
+       <div className=' container row my-3 mx-4'  >
       <div className="container mx-3">{allproducts.length===0 && "noting to show here"}</div>
        { allproducts.map((allproduct)=>{
   return <Productitem key={allproduct._id} products={allproduct}   />
