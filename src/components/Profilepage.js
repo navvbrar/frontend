@@ -1,10 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import productcontext from '../context/Productcontext';
 import{Link} from "react-router-dom";
-import {useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom";
+
 
 export default function Profilepage() {
     const navigation= useNavigate();
+    const [editprofile,seteditprofile]= useState("name");
+    
+   const onedit_profile = (e)=>{
+    seteditprofile(e.target.id);
+  
+
+   }
+
+
     const onclick=()=>{
     localStorage.removeItem("token");
     navigation("/loginsignup")
@@ -108,8 +118,9 @@ export default function Profilepage() {
               <div className="col-sm-3">
                 <p className="mb-0">Full Name</p>
               </div>
-              <div className="col-sm-9">
-                <p className="text-muted mb-0">{user.currentuser.name}</p>
+              <div className="col-sm-9 ">
+                <p className="text-muted mb-0">{user.currentuser.name} <i className="fa-solid fa-pencil position-absolute end-0 " style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal" id="name"  onClick={onedit_profile}></i></p>
+             
               </div>
             </div>
             <hr/>
@@ -118,7 +129,8 @@ export default function Profilepage() {
                 <p className="mb-0">Email</p>
               </div>
               <div className="col-sm-9">
-                <p className="text-muted mb-0">{user.currentuser.email}</p>
+                <p className="text-muted mb-0">{user.currentuser.email}  <i className="fa-solid fa-pencil position-absolute  end-0" style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal" id="email"  onClick={onedit_profile}></i></p>
+                
               </div>
             </div>
             <hr/>
@@ -127,7 +139,7 @@ export default function Profilepage() {
                 <p className="mb-0">Phone</p>
               </div>
               <div className="col-sm-9">
-                <p className="text-muted mb-0">{user.currentuser.phonenumber}</p>
+                <p className="text-muted mb-0">{user.currentuser.phonenumber}<i className="fa-solid fa-pencil position-absolute end-0 "  id="phone number" style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={onedit_profile}></i></p>
               </div>
             </div>
             <hr/>
@@ -136,7 +148,7 @@ export default function Profilepage() {
                 <p className="mb-0">Mobile</p>
               </div>
               <div className="col-sm-9">
-                <p className="text-muted mb-0">(098) 765-4321</p>
+                <p className="text-muted mb-0">(098) 765-4321  <i className="fa-solid fa-pencil position-absolute  end-0" style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal"  ></i></p>
               </div>
             </div>
             <hr/>
@@ -145,85 +157,46 @@ export default function Profilepage() {
                 <p className="mb-0">Address</p>
               </div>
               <div className="col-sm-9">
-                <p className="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                <p className="text-muted mb-0">Bay Area, San Francisco, CA  <i className="fa-solid fa-pencil position-absolute  end-0 " id="adress" style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={onedit_profile} ></i></p>
               </div>
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-6">
-            <div className="card mb-4 mb-md-0">
-              <div className="card-body">
-                <p className="mb-4"><span className="text-primary font-italic me-1">assigment</span> Project Status
-                </p>
-                <p className="mb-1" style={{fontSize: ".77rem"}}>Web Design</p>
-                <div className="progress rounded" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "80%"}} aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p className="mt-4 mb-1" style={{fontSize: ".77rem"}}>Website Markup</p>
-                <div className="progress rounded" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "72%"}} aria-valuenow="72"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p className="mt-4 mb-1" style={{fontSize: ".77rem"}}>One Page</p>
-                <div className="progress rounded" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "89%"}} aria-valuenow="89"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p className="mt-4 mb-1" style={{fontSize: ".77rem"}}>Mobile Template</p>
-                <div className="progress rounded" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "55%"}} aria-valuenow="55"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p className="mt-4 mb-1" style={{fontSize: ".77rem"}}>Backend API</p>
-                <div className="progress rounded mb-2" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "66%"}} aria-valuenow="66"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="card mb-4 mb-md-0">
-              <div className="card-body">
-                <p className="mb-4"><span className="text-primary font-italic me-1">assigment</span> Project Status
-                </p>
-                <p className="mb-1" style={{fontSize: ".77rem"}}>Web Design</p>
-                <div className="progress rounded" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "80%"}} aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p className="mt-4 mb-1" style={{fontSize: ".77rem"}}>Website Markup</p>
-                <div className="progress rounded" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "72%"}} aria-valuenow="72"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p className="mt-4 mb-1" style={{fontSize: ".77rem"}}>One Page</p>
-                <div className="progress rounded" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "89%"}} aria-valuenow="89"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p className="mt-4 mb-1" style={{fontSize: ".77rem"}}>Mobile Template</p>
-                <div className="progress rounded" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "55%"}} aria-valuenow="55"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p className="mt-4 mb-1" style={{fontSize: ".77rem"}}>Backend API</p>
-                <div className="progress rounded mb-2" style={{height: "5px"}}>
-                  <div className="progress-bar" role="progressbar" style={{width: "66%"}} aria-valuenow="66"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   </div>
 </section>
+{/* <!-- Button trigger modal --> */}
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
 
-
+{/* <!-- Modal --> */}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="form-floating mb-3">
+  <input type={editprofile=="email"?"email":"text"} class="form-control" id="floatingInput1" placeholder={editprofile}/>
+  <label for="floatingInput">{editprofile}</label>
+</div>
+      <div class="form-floating mb-3">
+  <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+  <label for="floatingInput">Enter profile password</label>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     </>
   )
 }
