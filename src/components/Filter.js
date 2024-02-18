@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 export default function Filter() {
   const {searchproduct,setsearchproduct} = useContext(productcontext)
   let[range,setrange]=useState({min:"",max:""})
+  const [page_no,setpage_no]= useState(1);
  const onchange=(e)=>{
   setrange({...range,[e.target.name]:e.target.value})
     console.log(searchproduct)
@@ -291,7 +292,7 @@ export default function Filter() {
           </div>
           
         <div className="justify-content-center ">
-        <Search/>
+        <Search page={page_no}/>
         </div>
         
         <hr />

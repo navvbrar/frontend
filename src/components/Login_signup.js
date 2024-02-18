@@ -225,7 +225,7 @@ else if (response.success=== false){
     <body style={{background:"#c8c8c8",font:`600 16px/18px 'Open Sans',sans-serif`,color:"#6a6f8c",margin:"0px"}}>
       <div class ="row" >  
 	<div class="col-md-6 mx-auto p-0">
-		<div class="card" style={{width:"500px",left:"100px",height:"700px"}}>
+		<div class="card" style={{width:"500px",left:"auto",height:"700px",margin:"auto"}}>
 <div class="login-box">
 	<div class="login-snip">
 		<input id="tab-1" type="radio" name="tab"  class="sign-in"  defaultChecked/><label for="tab-1" class="tab"   >Login</label>

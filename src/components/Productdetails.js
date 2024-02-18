@@ -9,7 +9,7 @@ const { Link } = require("react-router-dom");
 
 
 export default function Productdetails() {
-  const { singleproduct, addid, addtocart, add_review, allreviews, average_rating, storeproduct_id, getreviews } = useContext(productcontext);
+  const {productdetails, singleproduct, addid, addtocart, add_review, allreviews, average_rating, storeproduct_id, getreviews } = useContext(productcontext);
   const [size, setsize] = useState()
   const [quantity, setquantity] = useState(1)
   const [nullsize, setnullsize] = useState()
@@ -41,12 +41,24 @@ export default function Productdetails() {
       }, 1500);
     }
     else {
-      await addtocart(addid, quantity, size)
+      const cart_response= await addtocart(addid, quantity, size)
+      if(cart_response===true){
       setinputsize("item added to cart")
       setTimeout(() => {
         setinputsize(null)
       }, 1500);
+      await productdetails(singleproduct._id);
     }
+    else{
+      setnullsize("Not enough Stock available");
+      setTimeout(() => {
+        setnullsize(null)
+      }, 1500);
+
+    }
+  
+  
+  }
 
 
   }
@@ -162,6 +174,7 @@ export default function Productdetails() {
                 </div>
                 <h3 className="container ">{singleproduct.name}</h3>
                 <p>{singleproduct.description}</p>
+                <p><b> Stock left: {singleproduct.stock }</b></p>
                 <div className="container">
                   <div className="sizes mt-5" >
                     <h6 className={`text-uppercase`} >Size</h6> <label className={`radio ${singleproduct.size.S === false ? "crossed" : null}`}> <input type="radio" name="size" id="size1" value="S" onChange={onchange} disabled={singleproduct.size.S === false} /> <span>S</span> </label> <label className="radio"> <input type="radio" name="size" id="size2" value="M" onChange={onchange} disabled={singleproduct.size.M === false} /> <span>M</span> </label> <label className="radio"> <input type="radio" name="size" id="size3" value="L" onChange={onchange} disabled={singleproduct.size.L === false} /> <span>L</span> </label> <label className="radio"> <input type="radio" name="size" id="size4" value="XL" onChange={onchange} disabled={singleproduct.size.XL === false} /> <span>XL</span> </label> <label className="radio"> <input type="radio" name="size" value="XXL" id="size5" onChange={onchange} disabled={singleproduct.size.XXL === false} /> <span>XXL</span> </label>

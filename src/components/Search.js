@@ -3,9 +3,9 @@ import Productitem from "./productitem";
 import productcontext from "../context/Productcontext";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
-export default function Search() {
-  const {  searchitem, searchproduct } =
-    useContext(productcontext);
+export default function Search(props) {
+  const {page_no}= props;
+  const {  searchitem, searchproduct } = useContext(productcontext);
   const navigation = useNavigate();
   const [parameter] = useSearchParams();
 

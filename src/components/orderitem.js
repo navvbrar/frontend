@@ -9,9 +9,9 @@ export default function Orderitem(props) {
     
   return (
     <>
-      <section className="vh-100 gradient-custom-2">
-  <div className="container py-5 h-100">
-    <div className="row d-flex justify-content-center align-items-center h-100">
+      <section className="vh-100 gradient-custom-2" style={{margin:"auto"}}>
+  <div className="container py-5 h-100"  style={{margin:"auto"}}>
+    <div className="row d-flex justify-content-center align-items-center h-100" >
       <div className="col-md-10 col-lg-8 col-xl-6">
         <div className="card card-stepper" style={{borderRadius: "16px"}}>
           <div className="card-header p-4">
@@ -46,6 +46,8 @@ export default function Orderitem(props) {
 
           <div className="card-body p-5">
 
+         
+
           
 
             {/* <ul id="progressbar-2" className="d-flex justify-content-between mx-0 mt-0 mb-5 px-0 pt-0 pb-2">
@@ -55,35 +57,35 @@ export default function Orderitem(props) {
               <li className="step0 text-muted text-end" id="step4"></li>
              
             </ul> */}
-            <div className='mb-0' style={{width:"400px" , margin:"0px"}}  > <Progressbar order={order} /></div>
+            <div className='mb-0' style={{width:"400px" , margin:"auto"}}  > <Progressbar order={order} /></div>
 
             <div className="d-flex justify-content-start">
-              <div className="d-lg-flex align-items-center">
+              <div className=" align-items-center my-3" style={{marginLeft:"auto"}}>
                 <i className="fas fa-clipboard-list fa-xl me-lg-4 mb-3 mb-lg-0"></i>
                 <div>
-                  <p className="fw-bold mb-1">Order</p>
-                  <p className="fw-bold mb-0">Processed</p>
+                  <p className="fw-bold mb-1" style={{fontSize:"14px"}}>Order</p>
+                  <p className="fw-bold mb-0" style={{fontSize:"14px"}}>Processed</p>
                 </div>
               </div>
-              <div className="d-lg-flex align-items-center">
+              <div className=" mx-5 align-items-center my-3" style={{marginLeft:"auto"}}>
                 <i className="fas fa-box-open fa-xl me-lg-4 mb-3 mb-lg-0"></i>
                 <div>
-                  <p className="fw-bold mb-1">Order</p>
-                  <p className="fw-bold mb-0">Shipped</p>
+                  <p className="fw-bold mb-1" style={{fontSize:"14px"}}>Order</p>
+                  <p className="fw-bold mb-0" style={{fontSize:"14px"}}>Shipped</p>
                 </div>
               </div>
-              <div className="d-lg-flex align-items-center">
+              <div className=" align-items-center my-3" style={{marginLeft:"auto"}}>
                 <i className="fas fa-shipping-fast fa-xl me-lg-4 mb-3 mb-lg-0"></i>
                 <div>
-                  <p className="fw-bold mb-1">Order</p>
-                  <p className="fw-bold mb-0">En Route</p>
+                  <p className="fw-bold mb-1" style={{fontSize:"14px"}}>Order</p>
+                  <p className="fw-bold mb-0" style={{fontSize:"14px"}}>on Route</p>
                 </div>
               </div>
-              <div className="d-lg-flex align-items-center">
+              <div className=" align-items-centerm  my-3" style={{marginLeft:"auto"}}>
                 <i className="fas fa-home fa-xl me-lg-4 mb-3 mb-lg-0"></i>
                 <div>
-                  <p className="fw-bold mb-1">Order</p>
-                  <p className="fw-bold mb-0">Arrived</p>
+                  <p className="fw-bold mb-1" style={{fontSize:"14px"}}>Order</p>
+                  <p className="fw-bold mb-0" style={{fontSize:"14px"}}>Arrived</p>
                 </div>
               </div>
             </div>

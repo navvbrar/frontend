@@ -158,8 +158,11 @@ const Productstate=(props)=> {
     })
     const response =await addtocart.json()
     if(response.success===true){
-       
-   console.log("we are in if block")
+        return true
+  
+    }
+    else{
+      return false
     }
     
 

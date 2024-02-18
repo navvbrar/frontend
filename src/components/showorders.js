@@ -12,7 +12,8 @@ export default function Showorders() {
    
   return (
     <>
-    < div className='container my-3 mx-4 ' style={{backgroundColor:theme.backcolor}}>
+    <div  className=' '>
+    < div className='' style={{backgroundColor:theme.backcolor}}>
      <div>{order.length===0?"no orders yet":""}</div>
        <div>
         {  x.map((o)=>{
@@ -21,6 +22,7 @@ export default function Showorders() {
           return <Orderitem key= {o._id} order={o} />
 
         })  } 
+       </div>
        </div>
        </div>
     </>

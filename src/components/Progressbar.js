@@ -10,20 +10,20 @@ export default function Progressbar(props) {
       now = 100
      }
      else if (order.status.pickup===true){
-      now = 75
+      now = 65
      }
      else if (order.status.shipped===true){
-      now = 50
+      now = 45
      }
      else if (order.status.ordered===true){
-      now = 25
+      now = 7
      }
 
     }
     setprogress()
   return (
     <>
-      <ProgressBar now={now} label={`${now}%`} striped variant="success"/>
+      <ProgressBar  now={now}  striped variant="success"/>
     </>
   )
 }
