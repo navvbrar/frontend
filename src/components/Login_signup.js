@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import "../login_signup.css"
+import productcontext from '../context/Productcontext';
 export default function Login_signup() {
-    
+     const {setloading}= useContext(productcontext);
     const[forminput,setforminput]= useState({fname:"",mname:"",lname:"",uname:"",email:"",phone:"",password:""})
     const [validation,setvalidation]=useState({message:"",fname_color:"",lname_color:"",uname_color:"",email_color:"",password_color:"",phone_color:""})
   const [input, setinput] = useState({ email: "", password: "" });
@@ -24,14 +25,17 @@ export default function Login_signup() {
   };
 
   const Login = async (e) => {
+  
     e.preventDefault();
     const { email, password } = input;
     const email_regex =  new RegExp("[a-z0-9]+@[a-z]+\.[a-z]{2,3}")
     if (!email_regex.test(email)){
+      
      setvalid({
          message:"email should be a valid email",
          color:"red"
      })
+    
      setTimeout(() => {
       setvalid({
         message:"",
@@ -40,7 +44,7 @@ export default function Login_signup() {
     }, 3000);
      return 0
     }
-    
+    setloading(30);
 
     const loginuser = await fetch("https://ecommerce-backend3-i4yr.onrender.com/api/auth", {
       headers: { "content-type": "application/json" },
@@ -51,10 +55,10 @@ export default function Login_signup() {
       }),
     });
     const response = await loginuser.json();
-
+     setloading(55);
     if (response.success === true) {
       localStorage.setItem("token", response.token);
-
+   setloading(85);
       setTimeout(() => {
         navi("/ ");
       }, 1000);
@@ -62,14 +66,17 @@ export default function Login_signup() {
       {
         <Navbar />;
       }
+      
       setvalid({
         color: "green",
         message: "logged in successfully",
       });
+      setloading(100);
       setTimeout(() => {
         setvalid(null);
       }, 3000);
     } else {
+      setloading(70);
       setvalid({ message: "username or password may be wrong", color: "red" });
       setTimeout(() => {
         setvalid({
@@ -77,6 +84,7 @@ export default function Login_signup() {
           message:""
         });
       }, 3000);
+      setloading(100);
     }
   };
   
@@ -102,6 +110,7 @@ const timeout_for_validation= ()=>{
 
    
    const signup = async(e)=>{
+    
     e.preventDefault();
     const {fname,mname,lname,uname,email,phone,password}=forminput;
     const regex_for_name = new RegExp("^[a-zA-Z0-9]+$")
@@ -179,9 +188,9 @@ const timeout_for_validation= ()=>{
         return 0
      }    
 
-
+  
       const signupuser = await fetch("https://ecommerce-backend3-i4yr.onrender.com/api/account",{
-
+  
   headers:{"content-type":"application/json"},
   method:"POST",
   body:JSON.stringify({
@@ -196,9 +205,10 @@ const timeout_for_validation= ()=>{
 
 
    })
-   const response = await signupuser.json()
-   console.log(response)
+   setloading(65);
+   const response = await signupuser.json();
    if(response.success===true){
+    setloading(85);
    localStorage.setItem("token",response.token)
     setvalidation({
         message:"account created successfully",
@@ -207,14 +217,16 @@ const timeout_for_validation= ()=>{
     setTimeout(()=>{
         navi("/")
     },2000)
-
+setloading(100);
    
 }
 else if (response.success=== false){
+
     setvalidation({
         message:response.error,
         color:"red"
     })
+    setloading(100);
 }
 
 

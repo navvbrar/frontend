@@ -10,6 +10,7 @@ export default function Loadinbar() {
         height={4}
         progress={loading}
         onLoaderFinished={() => setloading(0)}
+        loaderSpeed={1200}
       />
     </>
   )

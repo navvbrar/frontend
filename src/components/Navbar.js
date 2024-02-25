@@ -50,7 +50,7 @@ import {Link} from "react-router-dom"
     <img src={img} style={{height:"50px",width:"80px"}} ></img>
    
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className=" " style={{color:theme.backcolor==="black"?"white":"black"}}><i class="fa-solid fa-bars fa-xl"></i></span>
+      <span className="" style={{color:theme.backcolor==="black"?"white":"black"}}><i class="fa-solid fa-bars fa-xl"></i></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">

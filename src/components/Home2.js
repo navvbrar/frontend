@@ -15,6 +15,7 @@ import gimg6 from "../wardrobe/assets/img/girls/ruffle-frocks.jpg";
 import Pic from './Pic';
 import productcontext from '../context/Productcontext';
 import {Link,useSearchParams,useNavigate} from "react-router-dom";
+import Spinner from "./Spinner.js" ;
 export default function Home2() {
     const{getproducts,allproducts,setspinner,searchitem,theme}=useContext(productcontext)
     const [parameter] = useSearchParams();
@@ -32,7 +33,9 @@ export default function Home2() {
   return (
     <>
        <Pic/>
-    {allproducts.length===0?setspinner(true):
+       <div className="my-4" style={{margin:"auto"}}> <Spinner/></div>
+       
+    {/* {allproducts.length===0?setspinner(true): */}
       <main style={{backgroundColor:theme.backcolor}}>
         <section className="home-page my-4">
           <div className="container">
@@ -69,7 +72,9 @@ export default function Home2() {
                               ATHESTIC WEAR
                             </div>
                           </div>
+                          
                         </div>
+
                       </Link>
                     </div>
                     <div className="collage-inner collage-5">
@@ -257,7 +262,7 @@ export default function Home2() {
           </div>
         </section>
       </main>
-  }
+  {/* } */}
     </>
   )
 }

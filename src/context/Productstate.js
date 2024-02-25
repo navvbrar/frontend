@@ -42,7 +42,7 @@ const Productstate=(props)=> {
    }
     
    })
-  //  setloading(60)
+  
    let response = await product.json();
    if(response.success===true){
 
