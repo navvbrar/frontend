@@ -3,6 +3,7 @@ import productcontext from "../context/Productcontext";
 import StarRatings from "react-star-ratings";
 import Navbar from "./Navbar";
 import Reviewitem from "./Reviewitem";
+
 const { Link } = require("react-router-dom");
 
 
@@ -239,7 +240,7 @@ export default function Productdetails() {
 
                 <div className="add-to-cart-section parent-row">
 
-
+                {/* <button class="button btn-cart" onClick={onclick} ><span><span>Add to My Bag</span></span></button> */}
                   <a className="add-to-cart-btn btn" id="add-to-cart" onClick={onclick}>
                     {inputsize === null ? "Add to cart" : "added to cart"}  </a>
 

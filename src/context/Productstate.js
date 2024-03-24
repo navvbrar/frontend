@@ -203,10 +203,13 @@ const Productstate=(props)=> {
     body:JSON.stringify({quantity})
      
     })
-    let response= details.json();
+    let response= await details.json();
     if(response.success===true){
     settotal(response.totalprice)
-   console.log(response.totalprice)
+       return true
+    }
+    else{
+      return false
     }
 
 

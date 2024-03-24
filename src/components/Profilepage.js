@@ -116,10 +116,10 @@ export default function Profilepage() {
           <div className="card-body">
             <div className="row">
               <div className="col-sm-3">
-                <p className="mb-0">Full Name</p>
+                <p className="mb-0"> Name</p>
               </div>
               <div className="col-sm-9 ">
-                <p className="text-muted mb-0">{user.currentuser.name} <i className="fa-solid fa-pencil position-absolute end-0 " style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal" id="name"  onClick={onedit_profile}></i></p>
+                <p className="text-muted mb-0">{user.currentuser.name}  <i className="fa-solid fa-pencil position-absolute end-0 " style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal" id="name"  onClick={onedit_profile}></i></p>
              
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Profilepage() {
               </div>
             </div>
             <hr/>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-sm-3">
                 <p className="mb-0">Mobile</p>
               </div>
@@ -151,13 +151,13 @@ export default function Profilepage() {
                 <p className="text-muted mb-0">(098) 765-4321  <i className="fa-solid fa-pencil position-absolute  end-0" style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal"  ></i></p>
               </div>
             </div>
-            <hr/>
+            <hr/> */}
             <div className="row">
               <div className="col-sm-3">
                 <p className="mb-0">Address</p>
               </div>
               <div className="col-sm-9">
-                <p className="text-muted mb-0">Bay Area, San Francisco, CA  <i className="fa-solid fa-pencil position-absolute  end-0 " id="adress" style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={onedit_profile} ></i></p>
+                <p className="text-muted mb-0">Pending  <i className="fa-solid fa-pencil position-absolute  end-0 " id="adress" style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={onedit_profile} ></i></p>
               </div>
             </div>
           </div>
@@ -167,10 +167,8 @@ export default function Profilepage() {
     </div>
   </div>
 </section>
-{/* <!-- Button trigger modal --> */}
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+
+
 
 {/* <!-- Modal --> */}
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

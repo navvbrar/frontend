@@ -4,11 +4,31 @@ import productcontext from '../context/Productcontext';
 export default function Cartitem(props) {
   const{deletecartitem,getcart,updatecart}= useContext(productcontext);
       const {item}=props;
-      let[quantity,setquantity]= useState(item.quantity)
+      let[quantity,setquantity]= useState(item.quantity) 
+      const [quantity_validation,setquantity_validation] = useState({
+        message:""
+      })
+    
       const onplus=async()=>{
-       setquantity(quantity+1)
+  let adding_quantity = quantity+1;
+    const cart_response=  await updatecart(item._id,adding_quantity);
+   
+    if(cart_response===true){
+  
+      setquantity(quantity+1)
+    }
+    else{
       
-       await updatecart(item._id,quantity+1)
+     quantity_validation.message = " opps! No more stock";
+     setTimeout(() => {
+       setquantity_validation({
+        message:""
+       })
+     }, 2000);
+    }
+
+      
+      
        await getcart()
       }
       const onminus=async()=>{
@@ -18,8 +38,8 @@ export default function Cartitem(props) {
         await getcart()
       }}
       const ondelete=async()=>{
-       await deletecartitem(item._id)
-       await getcart()
+       await deletecartitem(item._id);
+       await getcart();
       }      
   return (
     <>
@@ -63,7 +83,7 @@ export default function Cartitem(props) {
                   </button>
 
                   <div className="form-outline">
-                    <input id="form1" min="0" name="quantity" value="1" type="number" className="form-control" value={quantity} />
+                    <input id="form1" min="0" name="quantity"  type="number" className="form-control" value={quantity} />
                     <label className="form-label" for="form1">{item.stock}</label>
                   </div>
 
@@ -77,7 +97,10 @@ export default function Cartitem(props) {
                 {/* <!-- Price --> */}
                 <p className="text-start text-md-center">
                   <strong>total cost:${item.product_id[0].price * quantity}</strong>
+                 
                 </p>
+                <div className='mx-4' style={{color:"red"}}>  {quantity_validation.message}</div>
+               
                 {/* <!-- Price --> */}
               </div>
             </div>

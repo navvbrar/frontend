@@ -16,8 +16,9 @@ import Pic from './Pic';
 import productcontext from '../context/Productcontext';
 import {Link,useSearchParams,useNavigate} from "react-router-dom";
 import Spinner from "./Spinner.js" ;
+
 export default function Home2() {
-    const{getproducts,allproducts,setspinner,searchitem,theme}=useContext(productcontext)
+    const{getproducts,allproducts,setspinner,searchitem,theme,spinner}=useContext(productcontext)
     const [parameter] = useSearchParams();
     const navigation = useNavigate();
     useEffect(()=>{
@@ -33,9 +34,9 @@ export default function Home2() {
   return (
     <>
        <Pic/>
-       <div className="my-4" style={{margin:"auto"}}> <Spinner/></div>
+       <div className="my-4" style={{justifyContent:"center"}} ><div > <Spinner/> </div></div>
        
-    {/* {allproducts.length===0?setspinner(true): */}
+     { spinner===true?<div style={{marginLeft:"580px"}}><h6 className='card-title'> loading please wait </h6></div>:
       <main style={{backgroundColor:theme.backcolor}}>
         <section className="home-page my-4">
           <div className="container">
@@ -262,7 +263,7 @@ export default function Home2() {
           </div>
         </section>
       </main>
-  {/* } */}
+   } 
     </>
   )
 }
