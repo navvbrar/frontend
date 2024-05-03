@@ -5,19 +5,19 @@ import productcontext from "../context/Productcontext";
 import {Link,useNavigate} from "react-router-dom";
 export default function Checkout() {
   const navigation=useNavigate()
-  const { neworder,total } = useContext(productcontext);
-  let [details, setdetails] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    phonenumber: "",
-    addressline: "",
-    city: "",
-    state: "",
-    country: "",
-    zipcode: "",
-    totalprice:0
-  });
+  const { neworder,total,cart,payment_stripe,details,setdetails } = useContext(productcontext);
+  // let [details, setdetails] = useState({
+  //   firstname: "",
+  //   lastname: "",
+  //   email: "",
+  //   phonenumber: "",
+  //   addressline: "",
+  //   city: "",
+  //   state: "",
+  //   country: "",
+  //   zipcode: "",
+  //   totalprice:0
+  // });
   const [payment, setpayment] = useState("paypal");
   const onchange = async (e) => {
     e.preventDefault();
@@ -34,8 +34,9 @@ export default function Checkout() {
   const handleSubmit = async (e) => {
    e.preventDefault();
    details.totalprice=total
-    await neworder(details);
-    navigation("/thankyou")
+  //   await neworder(details);
+    payment_stripe(cart.getitems)
+    await localStorage.setItem("details", JSON.stringify(details))
   };
  const onclick=async()=>{
   

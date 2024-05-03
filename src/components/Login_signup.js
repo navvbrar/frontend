@@ -28,7 +28,7 @@ export default function Login_signup() {
   
     e.preventDefault();
     const { email, password } = input;
-    const email_regex =  new RegExp("[a-z0-9]+@[a-z]+\.[a-z]{2,3}")
+    const email_regex =  new RegExp("/^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/")
     if (!email_regex.test(email)){
       
      setvalid({

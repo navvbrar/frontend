@@ -11,7 +11,7 @@ import Cartnote from "./Cartnote";
 
 export default function Cart() {
   const navigation=useNavigate();
-  const { total,setloading ,cart,addpromo} = useContext(productcontext);
+  const { total,setloading ,cart,addpromo,payment_stripe} = useContext(productcontext);
   let [a, seta] = useState();
   const [promotion,setpromotion]= useState({promo:"",totalprice:0})
   const [promo_res,setpromo_res]= useState({message:"",color:""})
@@ -26,6 +26,8 @@ const onclick=()=>{
 if(a===0){}
 else{
   setloading(50)
+  
+  
   navigation("/checkout")
   setloading(100)
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import productcontext from './Productcontext';
+import { loadStripe } from '@stripe/stripe-js';
 
 
 const Productstate=(props)=> {
@@ -28,6 +29,19 @@ const Productstate=(props)=> {
       backcolor:"white",
       textcolor:"blak"
     })
+
+    let [details, setdetails] = useState({
+      firstname: "",
+      lastname: "",
+      email: "",
+      phonenumber: "",
+      addressline: "",
+      city: "",
+      state: "",
+      country: "",
+      zipcode: "",
+      totalprice:0
+    });
     
     const getproducts= async()=>{
       setspinner(true)
@@ -255,8 +269,11 @@ const Productstate=(props)=> {
     setloading(60)
     const response = await addorder.json()
     if(response.success===true){
-      console.log(response)
+    
       setloading(100)
+      console.log("this is end total in function" + response.end_total)
+      return response.end_total
+
     }
 
 
@@ -374,7 +391,7 @@ const otp_match = async(data)=>{
   }
 
   const addpromo = async(data)=>{
- const fetch_promo = await fetch("${API_URL}/api/promotion",{
+ const fetch_promo = await fetch(`${API_URL}/api/promotion`,{
  method:"POST",
  headers:{
   "content-type":"application/json"
@@ -396,8 +413,29 @@ const otp_match = async(data)=>{
  
   }
 
+  const payment_stripe=async(data)=>{
+    const stripe = 
+    await loadStripe("pk_test_51P9qNQRoymbVDp1jYesh09RFXuSFqzK5i2gFonP98I6TwC2rEeNZmv0tCYlRESCEPOEOy9DjUxIEB7Q5nJCIo6qt00fsk05PEA");
+ const new_payemnt  = await fetch(`${API_URL}/api/session`,{
+  method:"POST",
+  headers:{
+    "content-type":"application/json"
+  },
+  body:JSON.stringify({getitems:data})
+ }
+ 
+)
+const response = await new_payemnt.json();
+
+  const end = await stripe.redirectToCheckout({
+  sessionId:response.id
+ })
+ 
+    
+}
+
   return (
-    <productcontext.Provider value={{getproducts ,allproducts,singleproduct,productdetails,getuser,user,getcart,cart,spinner,setspinner,loading,setloading,addtocart,addid,setaddid,valid,setvalid,deletecartitem,updatecart,total,searchitem,search,setsearch,searchproduct,setsearchproduct,neworder,getorder,order,addproduct,otp_req,otp_match, add_review,getreviews,average_rating,allreviews,storeproduct_id,setstoreproduct_id,addpromo,theme,settheme}}>
+    <productcontext.Provider value={{getproducts ,allproducts,singleproduct,productdetails,getuser,user,getcart,cart,spinner,setspinner,loading,setloading,addtocart,addid,setaddid,valid,setvalid,deletecartitem,updatecart,total,searchitem,search,setsearch,searchproduct,setsearchproduct,neworder,getorder,order,addproduct,otp_req,otp_match, add_review,getreviews,average_rating,allreviews,storeproduct_id,setstoreproduct_id,addpromo,theme,settheme,payment_stripe,details,setdetails}}>
         {props.children}
     </productcontext.Provider>
   )

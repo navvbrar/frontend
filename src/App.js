@@ -27,8 +27,9 @@ import Addproductpage from './components/Addproductpage';
 import Adminpage from './components/Adminpage';
 import Recoverpassword from './components/Recoverpassword';
 import Showorders from './components/showorders.js';
-
+import Cancel from "./components/Cancel.js" ;
 import Login_signup from './components/Login_signup.js';
+
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
     <Route path ="/recoverpass" element={<Recoverpassword/>}/>
     <Route path="/orders" element ={<Showorders/>}/>
     <Route path="/loginsignup" element ={<Login_signup/>}/>
+    <Route path="/cancel" element ={<Cancel/>}/>
     
 
     </Routes>

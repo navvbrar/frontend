@@ -1,13 +1,23 @@
 import React, { useContext, useEffect } from 'react'
 import Navbar from './Navbar'
 import Pic from './Pic'
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom" ;
 import productcontext from '../context/Productcontext'
 export default function Success() {
-    const{getorder,order,setspinner,total}=useContext(productcontext)
-    useEffect(()=>{
+    const{getorder,order,setspinner,total,cart,details,neworder}=useContext(productcontext)
+    var order_deatils;
+    useEffect( ()=>{
+
       setspinner(true)
+      // details.totalprice=total
+      const detail  = localStorage.getItem("details")
+      
+        order_deatils  = neworder(JSON.parse(detail));  
+        console.log(order_deatils)
+      
+   
      getorder()
+     
     },[])
 
   return (
@@ -79,7 +89,7 @@ export default function Success() {
                   </div>
                   <div className="f-flex justify-content-between font-weight-bold">
                     <p>Total</p>
-                    <p>{order.length === 0 ? "": total }</p>
+                    <p>{order.length === 0 ? "0": order[order.length-1].total}</p>
                   </div>
                   <div className="full-btn">
                     <Link to="/" className="btn">
