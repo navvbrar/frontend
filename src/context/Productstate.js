@@ -271,7 +271,7 @@ const Productstate=(props)=> {
     if(response.success===true){
     
       setloading(100)
-      console.log("this is end total in function" + response.end_total)
+      settotal(response.end_total)
       return response.end_total
 
     }
@@ -364,7 +364,7 @@ const otp_match = async(data)=>{
      const response = await adding_review.json();
      if (response.sucess === true){
 
-      console.log("yehhh addedd")
+       
      }
 
     }
@@ -383,7 +383,7 @@ const otp_match = async(data)=>{
        if(response.success === true){
         setallreviews(response.fetch_reviews)
         setaverage_rating(response.average_rating)
-        console.log(allreviews)
+        
        }
 
 

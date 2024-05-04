@@ -89,7 +89,7 @@ export default function Success() {
                   </div>
                   <div className="f-flex justify-content-between font-weight-bold">
                     <p>Total</p>
-                    <p>{order.length === 0 ? "0": order[order.length-1].total}</p>
+                    <p>{order.length === 0 ? "0": total}</p>
                   </div>
                   <div className="full-btn">
                     <Link to="/" className="btn">
