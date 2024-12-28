@@ -6,8 +6,8 @@ import "../login_signup.css"
 import productcontext from '../context/Productcontext';
 export default function Login_signup() {
      const {setloading}= useContext(productcontext);
-    const[forminput,setforminput]= useState({fname:"",mname:"",lname:"",uname:"",email:"",phone:"",password:""})
-    const [validation,setvalidation]=useState({message:"",fname_color:"",lname_color:"",uname_color:"",email_color:"",password_color:"",phone_color:""})
+    const[forminput,setforminput]= useState({fname:"",mname:"",lname:"",email:"",phone:"",password:""})
+    const [validation,setvalidation]=useState({message:"",fname_color:"",lname_color:"",email_color:"",password_color:"",phone_color:""})
   const [input, setinput] = useState({ email: "", password: "" });
   const [valid,setvalid] = useState({
     message:"",
@@ -104,7 +104,7 @@ export default function Login_signup() {
 const timeout_for_validation= ()=>{
 
  setTimeout(() => {
-   setvalidation({message:"",fname_color:"",lname_color:"",uname_color:"",email_color:"",password_color:"",phone_color:""})
+   setvalidation({message:"",fname_color:"",lname_color:"",email_color:"",password_color:"",phone_color:""})
  },2000);
 
 }
@@ -114,7 +114,7 @@ const timeout_for_validation= ()=>{
    const signup = async(e)=>{
     
     e.preventDefault();
-    const {fname,mname,lname,uname,email,phone,password}=forminput;
+    const {fname,mname,lname,email,phone,password}=forminput;
     const regex_for_name = new RegExp("^[a-zA-Z0-9]+$")
     if(fname.length<5){
         setvalidation({
@@ -132,14 +132,7 @@ const timeout_for_validation= ()=>{
       timeout_for_validation()
       return 0
   }
-   else if(uname.length<5){
-        setvalidation({
-            message:"user name should be atleast 5 characters",
-            uname_color:"red"
-        })
-        timeout_for_validation()
-        return 0
-    }
+  
    else if(lname.length<2){
         setvalidation({
             message:"last name should be atleast 2 characters",
@@ -199,7 +192,6 @@ const timeout_for_validation= ()=>{
    name:fname,
    email:email,
    phonenumber:parseInt(phone),
-   username:uname,
    password:password
 
   })
@@ -239,7 +231,7 @@ else if (response.success=== false){
     <body style={{background:"#c8c8c8",font:`600 16px/18px 'Open Sans',sans-serif`,color:"#6a6f8c",margin:"0px"}}>
       <div class ="row" >  
 	<div class="col-md-6 mx-auto p-0">
-		<div class="card" style={{width:"500px",left:"auto",height:"700px",margin:"auto"}}>
+		<div class="card" style={{width:"500px",left:"auto",height:"700px",margin:"auto",Top:'0px'}}>
 <div class="login-box">
 	<div class="login-snip">
 		<input id="tab-1" type="radio" name="tab"  class="sign-in"  defaultChecked/><label for="tab-1" class="tab"   >Login</label>
@@ -276,10 +268,10 @@ else if (response.success=== false){
 					<label for="user" class="label"><p style={{color:validation.lname_color}}>last name</p></label>
 					<input id="user1" name='lname' type="text" onChange={on_signup_change} class="input" placeholder="Last name" style={{color:validation.lname_color}}/>
 				</div>
-				<div class="group">
+				{/* <div class="group">
 					<label for="user" class="label" ><p style={{color:validation.uname_color}}>username</p></label>
 					<input id="user2" name='uname' type="text" onChange={on_signup_change} class="input" placeholder=" Username" style={{color:validation.uname_color}}/>
-				</div>
+				</div> */}
                 <div class="group">
 					<label for="pass" class="label"><p style={{color:validation.email_color}}>Email</p></label>
 					<input id="pass0" name='email' type="text" onChange={on_signup_change} class="input" placeholder="Enter your email address" style={{color:validation.email_color}}/>
@@ -292,17 +284,16 @@ else if (response.success=== false){
 					<label for="pass" class="label"><p style={{color:validation.password_color}}>password</p></label>
 					<input id="pass" name='password' type="password" onChange={on_signup_change} class="input" data-type="password" placeholder="Create your password" style={{color:validation.password_color}}/>
 				</div>
-				
 				<div class="group" >
-					<button  class="button"  onClick={signup}> Sign up</button>
+					<button  class="button input"  onClick={signup}> Sign up</button>
 				</div>
-        <p >{validation.message}</p>  
+				
+        <p class="group" style={{marginTop:"40px"}}>{validation.message}</p>  
 				<div class="hr"></div>
-				<div class="foot">
+				
         
-					{/* <label for="tab-1">Already Member?</label> */}
-				</div>
 			</div>
+      
 		</div>
 	</div>
 </div> 
